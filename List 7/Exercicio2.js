@@ -1,12 +1,12 @@
 const produtos = [
-  { nome: "Mouse", preco: 40 },
+  { nome: "Caderno", preco: 25 },
+  { nome: "Fone de ouvido", preco: 120 },
   { nome: "Teclado", preco: 80 },
-  { nome: "Monitor", preco: 600 },
-  { nome: "Cabo USB", preco: 25 }
+  { nome: "Caneta", preco: 5 }
 ];
 
-function produtosAcima50(lista) {
-  return lista.filter(produto => produto.preco > 50);
+function filtrarProdutos(produtos) {
+  return produtos.filter(produto => produto.preco > 50);
 }
 
-console.log(produtosAcima50(produtos));
+console.log(filtrarProdutos(produtos));

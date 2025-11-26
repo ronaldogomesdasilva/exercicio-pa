@@ -1,12 +1,12 @@
 const pessoas = [
-  { nome: "João", idade: 17 },
-  { nome: "Maria", idade: 22 },
-  { nome: "Pedro", idade: 18 },
-  { nome: "Ana", idade: 30 }
+  { nome: "Lucas", idade: 17 },
+  { nome: "Ana", idade: 22 },
+  { nome: "João", idade: 15 },
+  { nome: "Maria", idade: 30 }
 ];
 
-function maioresDeIdade(lista) {
-  return lista.filter(pessoa => pessoa.idade > 18);
+function filtrarMaiores(pessoas) {
+  return pessoas.filter(pessoa => pessoa.idade > 18);
 }
 
-console.log(maioresDeIdade(pessoas));
+console.log(filtrarMaiores(pessoas));

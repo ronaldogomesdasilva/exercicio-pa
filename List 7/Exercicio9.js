@@ -2,51 +2,44 @@ const conta = {
   agencia: "0001",
   numero: "12345-6",
   senha: "1234",
-  saldo: 1000,
+  saldo: 500,
   historico: []
 };
 
-function validarAcesso(agencia, numero, senha) {
-  return (
-    agencia === conta.agencia &&
-    numero === conta.numero &&
-    senha === conta.senha
-  );
+function validarAcesso(ag, num, senha) {
+  return (conta.agencia === ag && conta.numero === num && conta.senha === senha);
 }
 
-function exibirSaldo() {
-  return `Saldo atual: R$ ${conta.saldo}`;
+function verSaldo() {
+  return conta.saldo;
 }
 
-function realizarSaque(valor) {
+function sacar(valor) {
   if (valor > conta.saldo) {
-    return "Saldo insuficiente!";
+    return "Saldo insuficiente.";
   }
 
-  const notas = [100, 50, 20, 10];
-  let restante = valor;
-  let cedulas = {};
-
-  for (let nota of notas) {
-    let quantidade = Math.floor(restante / nota);
-    if (quantidade > 0) {
-      cedulas[nota] = quantidade;
-      restante -= quantidade * nota;
-    }
+  if (valor % 10 !== 0) {
+    return "Valor inválido. Utilize múltiplos de 10.";
   }
 
   conta.saldo -= valor;
-  conta.historico.push({ tipo: "saque", valor });
+  conta.historico.push(`Saque de R$${valor}`);
 
-  return {
-    mensagem: "Saque realizado com sucesso!",
-    cedulas,
-    saldoAtual: conta.saldo
-  };
+  let notas = {};
+
+  let valores = [100, 50, 20, 10];
+  for (let nota of valores) {
+    notas[nota] = Math.floor(valor / nota);
+    valor %= nota;
+  }
+
+  return notas;
 }
 
-// Exemplo de uso
+// Exemplo:
 if (validarAcesso("0001", "12345-6", "1234")) {
-  console.log(exibirSaldo());
-  console.log(realizarSaque(380));
+  console.log("Saldo:", verSaldo());
+  console.log("Notas entregues:", sacar(280));
+  console.log("Novo saldo:", verSaldo());
 }

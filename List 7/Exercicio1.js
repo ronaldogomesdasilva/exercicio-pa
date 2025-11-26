@@ -1,11 +1,11 @@
 const aluno = {
   nome: "Ronaldo",
-  idade: 20,
+  idade: 18,
   curso: "Desenvolvimento de Sistemas"
 };
 
 function apresentarAluno(aluno) {
-  return `O aluno ${aluno.nome} tem ${aluno.idade} anos e está cursando ${aluno.curso}.`;
+  return `O aluno ${aluno.nome} tem ${aluno.idade} anos e cursa ${aluno.curso}.`;
 }
 
 console.log(apresentarAluno(aluno));

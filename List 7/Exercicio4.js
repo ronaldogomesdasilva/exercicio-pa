@@ -1,7 +1,7 @@
 const nomes = ["Ana", "Carlos", "Ronaldo", "Maria"];
 
-function buscarNome(nome) {
-  return nomes.includes(nome);
+function verificarNome(nome) {
+  return nomes.includes(nome) ? "Nome encontrado" : "Nome não encontrado";
 }
 
-console.log(buscarNome("Ronaldo"));
+console.log(verificarNome("Ronaldo"));
