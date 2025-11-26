@@ -1,0 +1,20 @@
+let palavra = prompt("Digite uma palavra:").toLowerCase();
+let vogais = 0;
+for (let i = 0; i < palavra.length; i++) {
+  if ("aeiou".includes(palavra[i])) {
+    vogais++;
+  }
+}
+console.log(`A palavra '${palavra}' tem ${vogais} vogais.`);
+
+Justificativa: “Vou usar for para percorrer cada letra da palavra.”
+
+
+
+
+
+
+
+
+
+

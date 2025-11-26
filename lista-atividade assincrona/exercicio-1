@@ -1,0 +1,20 @@
+for (let i = 1; i <= 20; i++) {
+  console.log(i);
+}
+
+
+Justificativa: “Vou usar for porque sei exatamente o início, o fim e o incremento da contagem.”
+
+
+
+
+
+
+
+
+
+
+
+
+
+

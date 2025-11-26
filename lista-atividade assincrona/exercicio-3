@@ -1,0 +1,16 @@
+let soma = 0;
+for (let i = 1; i <= 5; i++) {
+  let numero = parseFloat(prompt("Digite o número " + i + ":"));
+  soma += numero;
+}
+console.log("Soma total:", soma);
+
+
+Justificativa: “Vou usar for porque sei exatamente quantas vezes (5) o laço deve repetir.”
+
+
+
+
+
+
+

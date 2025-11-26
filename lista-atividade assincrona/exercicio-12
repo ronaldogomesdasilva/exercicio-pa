@@ -1,0 +1,17 @@
+let numPrimo = parseInt(prompt("Digite um número:"));
+let ehPrimo = true;
+
+for (let i = 2; i < numPrimo; i++) {
+  if (numPrimo % i === 0) {
+    ehPrimo = false;
+    break;
+  }
+}
+console.log(ehPrimo ? "É primo" : "Não é primo");
+
+
+Justificativa: “Vou usar for porque o teste de divisores percorre um intervalo fixo.”
+
+
+
+

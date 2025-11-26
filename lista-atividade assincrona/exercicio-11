@@ -1,0 +1,23 @@
+let termos = parseInt(prompt("Quantos termos da sequência de Fibonacci?"));
+let a = 1, b = 1;
+console.log(a);
+console.log(b);
+for (let i = 3; i <= termos; i++) {
+  let c = a + b;
+  console.log(c);
+  a = b;
+  b = c;
+}
+
+Justificativa: “Vou usar for porque quero gerar uma quantidade fixa de termos.”
+
+
+
+
+
+
+
+
+
+
+

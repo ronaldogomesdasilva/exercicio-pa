@@ -1,0 +1,70 @@
+let opcao;
+
+do {
+  console.log(`
+===== MENU PRINCIPAL =====
+1 - Calcular Tabuada
+2 - Verificar Número Primo
+3 - Gerar Sequência de Fibonacci
+4 - Calcular Fatorial
+0 - Sair
+==========================
+`);
+  opcao = parseInt(prompt("Escolha uma opção:"));
+
+  switch (opcao) {
+    case 1:
+      let n = parseInt(prompt("Número para tabuada:"));
+      for (let i = 1; i <= 10; i++) {
+        console.log(`${n} x ${i} = ${n * i}`);
+      }
+      break;
+
+    case 2:
+      let num = parseInt(prompt("Digite um número:"));
+      let primo = true;
+      for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+          primo = false;
+          break;
+        }
+      }
+      console.log(primo ? "É primo" : "Não é primo");
+      break;
+
+    case 3:
+      let termos = parseInt(prompt("Quantos termos?"));
+      let a = 1, b = 1;
+      console.log(a);
+      console.log(b);
+      for (let i = 3; i <= termos; i++) {
+        let c = a + b;
+        console.log(c);
+        a = b;
+        b = c;
+      }
+      break;
+
+    case 4:
+      let f = parseInt(prompt("Número para fatorial:"));
+      let fat = 1;
+      for (let i = f; i > 1; i--) fat *= i;
+      console.log(`${f}! = ${fat}`);
+      break;
+
+    case 0:
+      console.log("Saindo...");
+      break;
+
+    default:
+      console.log("Opção inválida.");
+  }
+
+} while (opcao !== 0);
+
+Justificativa: “Vou usar while porque o menu deve repetir até o usuário escolher sair.”
+
+
+
+
+

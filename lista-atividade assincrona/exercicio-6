@@ -1,0 +1,14 @@
+let qtdAlunos = parseInt(prompt("Quantos alunos?"));
+
+for (let i = 1; i <= qtdAlunos; i++) {
+  let somaNotas = 0;
+  for (let j = 1; j <= 3; j++) {
+    somaNotas += parseFloat(prompt(`Nota ${j} do aluno ${i}:`));
+  }
+  let media = somaNotas / 3;
+  console.log(`Aluno ${i} - Média: ${media.toFixed(2)} - ${media >= 7 ? "Aprovado" : "Reprovado"}`);
+}
+
+
+Justificativa: “Vou usar for para repetir conforme o número de alunos e notas.”
+

@@ -1,0 +1,17 @@
+let numFat = parseInt(prompt("Digite um número:"));
+let fatorial = 1;
+for (let i = numFat; i > 1; i--) {
+  fatorial *= i;
+}
+console.log(`${numFat}! = ${fatorial}`);
+
+Justificativa: “Vou usar for porque conheço o limite e a sequência decrescente é fixa.”
+
+
+
+
+
+
+
+
+

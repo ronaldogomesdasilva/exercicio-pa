@@ -1,0 +1,28 @@
+let limite = parseInt(prompt("Digite o número final:"));
+for (let i = 1; i <= limite; i++) {
+  if (i % 2 === 0) {
+    console.log(i + " é par");
+  } else {
+    console.log(i + " é ímpar");
+  }
+}
+
+
+Justificativa: “Vou usar for porque conheço o limite final e farei uma verificação simples em cada número.”
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

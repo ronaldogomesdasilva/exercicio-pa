@@ -1,0 +1,20 @@
+let numero = parseFloat(prompt("Digite um número (0 para sair):"));
+let maior = numero;
+let menor = numero;
+
+while (numero !== 0) {
+  numero = parseFloat(prompt("Digite outro número (0 para sair):"));
+  if (numero !== 0) {
+    if (numero > maior) maior = numero;
+    if (numero < menor) menor = numero;
+  }
+}
+
+console.log(`Maior: ${maior}, Menor: ${menor}`);
+
+
+Justificativa: “Vou usar while porque não sei quantos números o usuário vai digitar.”
+
+
+
+

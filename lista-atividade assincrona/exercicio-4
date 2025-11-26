@@ -1,0 +1,16 @@
+let num = parseInt(prompt("Digite um número:"));
+while (num >= 0) {
+  console.log(num);
+  num--;
+}
+
+
+Justificativa: “Vou usar while porque vou diminuir até atingir 0.”
+
+
+
+
+
+
+
+
