@@ -1,12 +1,11 @@
 const jogadores = [
-  { nome: "Ana", pontos: 50 },
-  { nome: "Carlos", pontos: 80 },
-  { nome: "Ronaldo", pontos: 100 },
-  { nome: "Maria", pontos: 60 }
+  { nome: "Ana", pontos: 150 },
+  { nome: "Carlos", pontos: 230 },
+  { nome: "Ronaldo", pontos: 180 }
 ];
 
-function ranking(lista) {
-  return lista.sort((a, b) => b.pontos - a.pontos);
+function ordenarRanking(jogadores) {
+  return jogadores.sort((a, b) => b.pontos - a.pontos);
 }
 
-console.log(ranking(jogadores));
+console.log(ordenarRanking(jogadores));

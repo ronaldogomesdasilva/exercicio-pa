@@ -1,6 +1,11 @@
 function calcularMedia(notas) {
-  const soma = notas.reduce((total, nota) => total + nota, 0);
+  let soma = 0;
+
+  for (let nota of notas) {
+    soma += nota;
+  }
+
   return soma / notas.length;
 }
 
-console.log(calcularMedia([7, 8, 9, 6]));
+console.log(calcularMedia([8, 7, 9, 6]));

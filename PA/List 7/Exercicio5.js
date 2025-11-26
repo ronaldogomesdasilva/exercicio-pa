@@ -1,11 +1,11 @@
 function contarOcorrencias(array) {
-  const contador = {};
+  const contagem = {};
 
-  array.forEach(item => {
-    contador[item] = (contador[item] || 0) + 1;
-  });
+  for (let item of array) {
+    contagem[item] = (contagem[item] || 0) + 1;
+  }
 
-  return contador;
+  return contagem;
 }
 
-console.log(contarOcorrencias(["maçã", "banana", "maçã", "laranja", "banana", "maçã"]));
+console.log(contarOcorrencias(['a', 'b', 'a', 'c', 'b', 'a']));
